@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvDatum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResults" />
+
+    <TextView
+        android:id="@+id/tvResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TvNaam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Tvnaam"
+        app:layout_constraintEnd_toEndOf="@+id/KeuzeSpeler"
+        app:layout_constraintStart_toStartOf="@+id/KeuzeSpeler"
+        app:layout_constraintTop_toBottomOf="@+id/KeuzeSpeler" />
+
+    <TextView
+        android:id="@+id/tvComputernaam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvComputerNaam"
+        app:layout_constraintEnd_toEndOf="@+id/Keuzecomputer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/Keuzecomputer"
+        app:layout_constraintTop_toBottomOf="@+id/Keuzecomputer" />
+
+    <ImageView
+        android:id="@+id/Keuzecomputer"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@color/purple_500"
+        app:layout_constraintEnd_toStartOf="@+id/tvVstitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDatum"
+        app:srcCompat="@drawable/paper" />
+
+    <ImageView
+        android:id="@+id/KeuzeSpeler"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/purple_500"
+        app:layout_constraintStart_toEndOf="@+id/tvVstitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvDatum"
+        app:srcCompat="@drawable/scissors" />
+
+    <TextView
+        android:id="@+id/tvVstitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="@string/tvTitlevs"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvComputernaam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDatum" />
+</androidx.constraintlayout.widget.ConstraintLayout>
